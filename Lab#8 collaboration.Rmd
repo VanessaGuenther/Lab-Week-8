@@ -20,5 +20,16 @@ scatter<- ggplot(salmon, aes(x =Year, y =Imports)) +
   geom_point()
 
 scatter
+
+# A linear regression makes sense for this data because imports v.s. year seems to be linearly related.
+```
+
+5. Linear Regression in R 
+
+```{r}
+#Linear regression for imports v.s year
+salmon_model<- lm(Imports~Year, data = salmon)
+
+salmon_model
 ```
 
