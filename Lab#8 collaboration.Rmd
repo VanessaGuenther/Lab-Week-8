@@ -9,5 +9,16 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 salmon<- read_csv("salmon.csv")
+library(car)
+library(plotly)
+```
+
+4. Exploratory Scatterplot
+
+```{r}
+scatter<- ggplot(salmon, aes(x =Year, y =Imports)) +
+  geom_point()
+
+scatter
 ```
 
