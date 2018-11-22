@@ -72,6 +72,17 @@ salmon_graph<- ggplot(salmon, aes(x = Year, y = Imports))+
 salmon_graph
 ```
 
+9. Making perdictions using the model
+
+```{r}
+future_years<- data.frame(year = c(2022, 2024, 2026, 2028))
+
+perdictions<- predict(salmon_model, newdata = future_years, interval = "confidence")
+
+perdictions
+
+
+```
 
 
 
