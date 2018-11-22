@@ -28,8 +28,14 @@ scatter
 
 ```{r}
 #Linear regression for imports v.s year
-salmon_model<- lm(Imports~Year, data = salmon)
+salmon_model<- lm(Year~Imports, data = salmon)
 
 salmon_model
 ```
+
+imports(tons)= 
+
+
+
+
 
