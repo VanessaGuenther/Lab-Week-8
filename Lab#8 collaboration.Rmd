@@ -33,7 +33,31 @@ salmon_model<- lm(Year~Imports, data = salmon)
 salmon_model
 ```
 
-imports(tons)= 
+imports(tons)= 0.000199 + 0.0000125(Year)
+  - This means that every year 0.0000125 more tons of slamon are exported and that in year 0 0.000199 tons of salmon were exported.
+  
+6. Model Diagnostics
+
+```{r}
+plot(salmon_model)
+
+#residuals appear normally distrubuted and there seems to be no concern over heteroscedacticity or outliers
+
+par(mfrow = c(2,2))
+plot(salmon_model)
+```
+
+7. Explore Model fit ans significance
+
+```{r}
+summary(salmon_model)
+
+# The model signicicantly perdicts the salmon inports p-value = 0 (significantly =0)
+# The R^2^ equal to 0.95 which indicates that 95% of salmon imports are determined by year
+# 5% of salmon inports are not determined by year
+
+```
+
 
 
 
